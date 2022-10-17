@@ -1,0 +1,91 @@
+.nav-bar {
+  background: #181818;
+  width: 60px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 3;
+  min-height: 500px;
+
+  .Logo {
+    display: block;
+    padding: 8px 0;
+
+    img {
+      display: block;
+      width: 40px;
+      margin: 8px auto;
+      height: auto;
+
+      &.sub-logo {
+        width: 50px;
+      }
+    }
+  }
+  nav {
+    display: block;
+    position: absolute;
+    text-align: center;
+    height: 210px;
+    top: 50%;
+    width: 100%;
+    margin-top: -120px;
+
+    a {
+      font-size: 22px;
+      color: #4d4d4e;
+      line-height: 51px;
+      position: relative;
+      height: 51px;
+      display: block;
+      text-decoration: none;
+
+      i {
+        transition: all 0.3s ease-out;
+      }
+
+      &:hover {
+        color: #ffd700;
+
+        svg {
+          opacity: 0;
+        }
+
+        &:after {
+          opacity: 1;
+        }
+      }
+
+      &:after {
+        content: "";
+        font-size: 9px;
+        letter-spacing: 2px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        display: block;
+        transition: all 0.3s ease-out;
+        opacity: 0;
+      }
+
+      &:first-child {
+        &:after {
+          content: "Home";
+        }
+      }
+
+      &.about-link {
+        &:after {
+          content: "About";
+        }
+      }
+
+      &.contact-link {
+        &:after {
+          content: "Contact";
+        }
+      }
+    }
+  }
+}
